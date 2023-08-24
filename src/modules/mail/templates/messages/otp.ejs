@@ -1,0 +1,26 @@
+<div class="align-center">
+    <h2>
+        <%- translate(user.settings.language, 'Hello ::name!' , { name: user.name }) %>
+    </h2>
+
+    <p>
+        <%- translate(user.settings.language, 'We have generated a one-time access password for you:' ) %>
+    </p>
+
+    <h3>
+        <u>
+            <%= params.otp %>
+        </u>
+    </h3>
+
+    <p>
+        <%- translate(user.settings.language, 'Use it to:' ) %>
+            <% switch (params.purpose) { case 'accountActivation' : %>
+                <strong> <%- translate(user.settings.language, 'activate your account' ) %></strong>.
+                <% break; case 'passwordReset' : %>
+                    <strong> <%- translate(user.settings.language, "reset your account's password" ) %></strong>.
+                    <% break; default: %>
+                        <strong> <%- translate(user.settings.language, 'authorize your recent activity' ) %></strong>.
+                        <% } %>
+    </p>
+</div>

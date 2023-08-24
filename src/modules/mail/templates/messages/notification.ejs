@@ -1,0 +1,15 @@
+<div class="align-center">
+    <h2>
+        <%- translate(user.settings.language, 'Hello ::name!' , { name: user.name }) %>
+    </h2>
+
+    <p>
+        <%- translate(user.settings.language, 'We want to inform you that:' ) %>
+            <% switch (params.notification) { case 'user.passwordChanged' : %>
+                <strong> <%- translate(user.settings.language, "your account's password has been changed" ) %></strong>.
+                <% break; default: %>
+                    <strong> <%- translate(user.settings.language, 'we noticed an unhandled account activity' )
+                            %></strong>.
+                    <% } %>
+    </p>
+</div>

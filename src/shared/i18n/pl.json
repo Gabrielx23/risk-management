@@ -1,0 +1,13 @@
+{
+    "Hello ::name!": "Cześć ::name!",
+    "We want to inform you that:": "Chcielibyśmy poinformować, że:",
+    "your account's password has been changed": "hasło do Twojego konta zostało zmienione",
+    "we noticed an unhandled account activity": "odnotowaliśmy nieobsługiwaną aktywność na Twoim koncie",
+    "We have generated a one-time access password for you:": "Wygenerowaliśmy dla Ciebie jednorazowe hasło dostępu:",
+    "Use it to:": "Użyj go aby:",
+    "activate your account": "aktywować swoje konto",
+    "reset your account's password": "ustawić nowe hasło do swojego konta",
+    "authorize your recent activity": "potwierdzić swoją ostatnią operację",
+    "One Time Password": "Jednorazowe Hasło Dostępu",
+    "Notification": "Powiadomienie"
+}

@@ -1,0 +1,672 @@
+{
+	"info": {
+		"_postman_id": "03faa93f-5fb7-490d-94eb-73c4a5436c41",
+		"name": "thisless",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "account",
+			"item": [
+				{
+					"name": "/account",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Test Test\",\n    \"email\": \"test@test.pl\",\n    \"password\": \"testtest\",\n    \"passwordConfirmation\": \"testtest\",\n    \"settings\": {\n        \"language\": \"pl\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/account",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/account",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/account",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/account/activate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"otp\": \"pfoJ3Epm\",\n    \"email\": \"test@test.pl\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/account/activate",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"account",
+								"activate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/account/generate-activation-code",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"test@test.pl\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/account/generate-activation-code",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"account",
+								"generate-activation-code"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/account/password-reset/request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"test@test.pl\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/account/password-reset/request",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"account",
+								"password-reset",
+								"request"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/account/password-reset/apply",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"test@test.pl\",\n    \"otp\": \"wE3kdtzH\",\n    \"password\": \"testtest2\",\n    \"passwordConfirmation\": \"testtest2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/account/password-reset/apply",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"account",
+								"password-reset",
+								"apply"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/account/password",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\": \"testtest1\",\n    \"passwordConfirmation\": \"testtest1\",\n    \"oldPassword\": \"testtest\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/account/password",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"account",
+								"password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/account",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/account",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/account",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Test Test2\",\n    \"email\": \"test@test.pl\",\n    \"settings\": {\n        \"language\": \"en\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/account",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"account"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "/auth/refresh-token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/auth/refresh-token",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"refresh-token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/auth/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"test@test.pl\",\n    \"password\": \"testtest\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/auth/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/auth/logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/auth/logout",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "/users/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/users/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "bdb4fe66-85ac-4f74-8b28-f1557ebb7258"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users/:id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Test Test3\",\n    \"email\": \"test2@test.pl\",\n    \"role\": \"user\",\n    \"settings\": {\n        \"language\": \"pl\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "59e5bfe7-eec6-4aaa-90cb-ed8e22e02da5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/users/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "59e5bfe7-eec6-4aaa-90cb-ed8e22e02da5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "email",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "sortBy",
+									"value": "users.updatedAt",
+									"disabled": true
+								},
+								{
+									"key": "sortDirection",
+									"value": "desc",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "problems",
+			"item": [
+				{
+					"name": "risk-metrics",
+					"item": [
+						{
+							"name": "/problems/:problemId/risk-metrics",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"likelihood\": 10,\n    \"impact\": 10,\n    \"comment\": \"risk metric comment\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/problems/:problemId/risk-metrics",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"problems",
+										":problemId",
+										"risk-metrics"
+									],
+									"variable": [
+										{
+											"key": "problemId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/problems/:problemId/risk-metrics",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/problems/:problemId/risk-metrics?limit=10",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"problems",
+										":problemId",
+										"risk-metrics"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "10"
+										},
+										{
+											"key": "page",
+											"value": "2",
+											"disabled": true
+										},
+										{
+											"key": "sortBy",
+											"value": "riskMetrics.createdAt",
+											"disabled": true
+										},
+										{
+											"key": "sortDirection",
+											"value": "desc",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"key": "problemId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "/problems",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"my big problem\",\n    \"description\": \"wow! soo big\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/problems",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"problems"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/problems",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/problems?page=1&limit=10&sortBy=problems.createdAt&sortDirection=desc",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"problems"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "sortBy",
+									"value": "problems.createdAt"
+								},
+								{
+									"key": "sortDirection",
+									"value": "desc"
+								},
+								{
+									"key": "search",
+									"value": "other",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/problems/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/problems/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"problems",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "9d9166a7-55b4-44b2-868a-e520514bbaa3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/problems/:id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"some big problem\",\n    \"description\": \"wow! soo big\",\n    \"result\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/problems/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"problems",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "9d9166a7-55b4-44b2-868a-e520514bbaa3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/problems/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/problems/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"problems",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "c4a4a03c-bec5-47fb-ab3a-2a1d38208658"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
